@@ -1,0 +1,18 @@
+Create virtual host config:
+
+sudo tee /etc/httpd/conf.d/mysamplewebsite.itfs.conf > /dev/null <<'EOF'
+<VirtualHost *:80>
+    ServerName mysamplewebsite.itfs
+    ServerAlias www.mysamplewebsite.itfs
+    DocumentRoot /var/www/mysamplewebsite.itfs/public_html
+
+    <Directory /var/www/mysamplewebsite.itfs/public_html>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    ErrorLog /var/log/httpd/mysamplewebsite.itfs-error.log
+    CustomLog /var/log/httpd/mysamplewebsite.itfs-access.log combined
+</VirtualHost>
+EOF

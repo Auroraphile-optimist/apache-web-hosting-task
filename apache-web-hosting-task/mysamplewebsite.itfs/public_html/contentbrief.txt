@@ -1,0 +1,23 @@
+Create a custom Virtual Host for mysamplewebsite.itfs
+
+We’ll create a vhost file under /etc/httpd/conf.d/.
+
+Create document root for this site:
+
+sudo mkdir -p /var/www/mysamplewebsite.itfs/public_html
+sudo chown -R root:root /var/www/mysamplewebsite.itfs
+sudo chmod -R 755 /var/www/mysamplewebsite.itfs
+
+
+Create index for the vhost:
+
+cat <<'HTML' | sudo tee /var/www/mysamplewebsite.itfs/public_html/index.html
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>mysamplewebsite.itfs</title></head>
+<body>
+  <h1>mysamplewebsite.itfs — Hello!</h1>
+  <p>Served by custom virtual host.</p>
+</body>
+</html>
+HTML

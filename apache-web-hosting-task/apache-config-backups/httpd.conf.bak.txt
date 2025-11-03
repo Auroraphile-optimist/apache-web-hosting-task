@@ -1,0 +1,3 @@
+Backup Apache configuration directory and virtual host files
+
+cp -v /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak

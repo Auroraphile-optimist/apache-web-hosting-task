@@ -1,0 +1,8 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>mysamplewebsite.itfs</title></head>
+<body>
+  <h1>mysamplewebsite.itfs — Hello!</h1>
+  <p>Served by custom virtual host.</p>
+</body>
+</html>
